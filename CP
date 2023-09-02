@@ -1,0 +1,27 @@
+ímport pandas as pd
+import matplotlib.pyplot as plt
+job_data = pd.read_csv('C:\\Users\\Dell\\Downloads\\archive (1)\\data job posts.csv')
+job_data.head()
+job_data.describe()
+job_data.isnull().sum()
+job_data['comapny'].unique()
+job_data['Year'].unique()
+
+#plotting a histogram
+job_data['Location'].value_counts().plot(kind='bar']
+plt.title('Job Location')
+plt.xlabel('Location')
+plt.ylabel('Count')
+plt.show()
+
+#plotting a pie chart
+job_data['Job post'].value_counts().plot(kind='pie', autopct='%1.1f%%')
+plt.title('Job post')
+plt.show()
+
+# Plot a bar chart of experience requirements
+title.plot(kind='bar')
+plt.title('Title')
+plt.xlabel('Years of Experience')
+plt.ylabel('Count')
+plt.show()
